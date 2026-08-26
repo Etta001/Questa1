@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questa - Complete Project Summary</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            padding: 40px 20px;
+            color: #1a1a2e;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            border-left: 4px solid #f59e0b;
+            padding-left: 16px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #334155;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        th {
+            background: #f8fafc;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        td {
+            color: #334155;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-admin { background: #fef3c7; color: #d97706; }
+        .badge-student { background: #dbeafe; color: #2563eb; }
+        .badge-lecturer { background: #d1fae5; color: #059669; }
+
+        .code-block {
+            background: #1e293b;
+            color: #e9f5e1;
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin: 12px 0 20px;
+            white-space: pre-wrap;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin: 16px 0 24px;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 16px 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card h4 {
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .feature-card p {
+            font-size: 13px;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .folder-tree {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px 24px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #1a1a2e;
+            border: 1px solid #e2e8f0;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+
+        .folder-tree .folder { color: #f59e0b; font-weight: 600; }
+        .folder-tree .file { color: #3b82f6; }
+
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .print-btn {
+            background: #1e293b;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .print-btn:hover {
+            background: #0f172a;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 24px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            th, td { padding: 8px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content">
+        <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        
+       <a href="admin/dashboard.php"><button class="print-btn"-> back to dashboard</button></a>
+        <!-- Header -->
+        <h1>📘 QUESTA</h1>
+        <div class="subtitle">HND Online Question Bank System · CITEC-HITM</div>
+
+        <!-- Author -->
+        <div style="background: #f8fafc; border-radius: 12px; padding: 16px 20px; margin-bottom: 32px; border-left: 4px solid #f59e0b;">
+            <p style="margin: 0;"><strong>Author:</strong> ANYA JOSEPHAT ETTA &nbsp;|&nbsp; <strong>Year:</strong> 2026 &nbsp;|&nbsp; <strong>Institution:</strong>CITEC-HITM</p>
+        </div>
+
+        <!-- ==================== SECTION 1: SYSTEM OVERVIEW ==================== -->
+        <h2>1. System Overview</h2>
+        <p><strong>Questa</strong> is a comprehensive online HND question bank system designed for CITEC-HITM. It provides students with centralized access to past examination papers, interactive quizzes, exam results, timetables, academic calendars, news updates, library resources, financial status tracking, and an AI-powered chatbot assistant.</p>
+
+        <p>The system was developed following the <strong>Agile methodology</strong> using <strong>PHP, MySQL, HTML, CSS, and JavaScript</strong>. It features role-based access control, a centralized PDF repository, real-time notifications, and a fully responsive design that works on desktop, tablet, and mobile devices.</p>
+
+        <!-- ==================== SECTION 2: KEY FEATURES ==================== -->
+        <h2>2. Key Features</h2>
+
+        <h3>🔐 Authentication & Security</h3>
+        <ul style="margin-left: 20px; margin-bottom: 16px; color: #334155; line-height: 1.8;">
+            <li>Secure login with password hashing (bcrypt)</li>
+            <li>Role-based access control (Student, Lecturer, Admin)</li>
+            <li>Session management and secure logout</li>
+            <li>Password recovery via email</li>
+            <li>Profile picture upload with real-time sync across all pages</li>
+        </ul>
+
+        <h3>👨‍🎓 Student Features</h3>
+        <div class="feature-grid">
+            <div class="feature-card"><h4>📊 Dashboard</h4><p>Personalized welcome with statistics and 9 quick access feature cards</p></div>
+            <div class="feature-card"><h4>📚 Question Bank</h4><p>Search, filter, view, download, and print past question papers (PDF)</p></div>
+            <div class="feature-card"><h4>📝 Interactive Quizzes</h4><p>Multiple Choice and Structural questions with auto-grading</p></div>
+            <div class="feature-card"><h4>📋 Exam Results</h4><p>View semester results with GPA, overall grade, and print/save as PDF</p></div>
+            <div class="feature-card"><h4>📅 Exam Dates</h4><p>Countdown timer to next exam with semester schedules</p></div>
+            <div class="feature-card"><h4>📆 Timetable</h4><p>Weekly lecture schedule with desktop grid and mobile card views</p></div>
+            <div class="feature-card"><h4>🗓️ Academic Calendar</h4><p>Month view with color-coded events (exams, holidays, deadlines)</p></div>
+            <div class="feature-card"><h4>📰 News & Updates</h4><p>Category filters, search, and browser notifications</p></div>
+            <div class="feature-card"><h4>📚 Library & Resources</h4><p>E-books, articles, videos, study guides, and research databases</p></div>
+            <div class="feature-card"><h4>👤 Profile Management</h4><p>Update name, profile picture, and change password</p></div>
+            <div class="feature-card"><h4>💰 Financial Status</h4><p>View fee payment status with progress bar</p></div>
+            <div class="feature-card"><h4>🤖 AI Chatbot</h4><p>24/7 AI assistant for exam help and study tips</p></div>
+        </div>
+
+        <h3>👨‍🏫 Lecturer Features</h3>
+        <ul style="margin-left: 20px; margin-bottom: 16px; color: #334155; line-height: 1.8;">
+            <li>📤 Upload question papers (PDF) with metadata</li>
+            <li>📊 View upload statistics and download counts</li>
+            <li>📁 Manage own uploaded papers</li>
+        </ul>
+
+        <h3>👑 Administrator Features</h3>
+        <ul style="margin-left: 20px; margin-bottom: 16px; color: #334155; line-height: 1.8;">
+            <li>👥 Manage Students, Lecturers, and All Users</li>
+            <li>📚 Manage Courses, Question Papers, Exam Results</li>
+            <li>📅 Manage Timetable, Exam Dates, Calendar</li>
+            <li>📰 Manage News and Library Resources</li>
+            <li>💰 Update Student Financial Records with History Log</li>
+            <li>🔔 Send Real-time Notifications to Students</li>
+        </ul>
+
+        <!-- ==================== SECTION 3: USER ROLES ==================== -->
+        <h2>3. User Roles and Access Levels</h2>
+
+        <table>
+            <thead>
+                <tr><th>Role</th><th>Access Level</th><th>Permissions</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="badge badge-student">Student</span></td>
+                    <td>Read &amp; Download</td>
+                    <td>View papers, download PDFs, take quizzes, view results, timetable, calendar, news, library, financial status, AI chatbot</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-lecturer">Lecturer</span></td>
+                    <td>Upload &amp; Manage</td>
+                    <td>Upload papers, manage own content, view statistics</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-admin">Administrator</span></td>
+                    <td>Full Control</td>
+                    <td>Manage all users, courses, papers, results, timetable, exams, calendar, news, library, financial records, notifications</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ==================== SECTION 4: LOGIN CREDENTIALS ==================== -->
+        <h2>4. Login Credentials</h2>
+
+        <table>
+            <thead>
+                <tr><th>Role</th><th>Email</th><th>Password</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="badge badge-admin">Administrator</span></td>
+                    <td><code>admin@questa.com</code></td>
+                    <td><code>admin123</code></td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-student">Student (Demo)</span></td>
+                    <td><code>josephatetta30@gmail.com</code></td>
+                    <td><code>password123</code></td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-lecturer">Lecturer (Demo)</span></td>
+                    <td><code>lecturer001@questa.com</code></td>
+                    <td><code>lecturer123</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Note:</strong> All newly registered students receive the default password: <span class="highlight">password123</span>. Students are advised to change their password after first login.</p>
+
+        <!-- ==================== SECTION 5: THEMES & COLORS ==================== -->
+        <h2>5. Themes and Color Scheme</h2>
+
+        <p>The system features three theme options that users can switch between using the theme switcher in the header and sidebar:</p>
+
+        <table>
+            <thead>
+                <tr><th>Theme</th><th>Primary Color</th><th>Accent Color</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>☀️ Light</td>
+                    <td>#ffffff (White)</td>
+                    <td>#f59e0b (Amber/Gold)</td>
+                    <td>Clean, bright interface for daytime use</td>
+                </tr>
+                <tr>
+                    <td>🌙 Dark</td>
+                    <td>#12121a (Dark Navy)</td>
+                    <td>#f59e0b (Amber/Gold)</td>
+                    <td>Eye-friendly dark mode for night use</td>
+                </tr>
+                <tr>
+                    <td>⚓ Navy</td>
+                    <td>#1e293b (Slate Navy)</td>
+                    <td>#4f46e5 (Indigo)</td>
+                    <td>Professional navy blue theme</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Color Coding in Exam Results</h3>
+        <table>
+            <thead>
+                <tr><th>Element</th><th>Color</th><th>Hex Code</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Grade A</td><td style="color:#10b981; font-weight:700;">Green</td><td>#10b981</td></tr>
+                <tr><td>Grade B</td><td style="color:#3b82f6; font-weight:700;">Blue</td><td>#3b82f6</td></tr>
+                <tr><td>Grade C</td><td style="color:#f59e0b; font-weight:700;">Amber</td><td>#f59e0b</td></tr>
+                <tr><td>Grade D</td><td style="color:#f97316; font-weight:700;">Orange</td><td>#f97316</td></tr>
+                <tr><td>Grade F</td><td style="color:#ef4444; font-weight:700;">Red</td><td>#ef4444</td></tr>
+                <tr><td>CA Score (0-14)</td><td style="color:#ef4444; font-weight:700;">Red</td><td>#ef4444</td></tr>
+                <tr><td>CA Score (15-24)</td><td style="color:#f59e0b; font-weight:700;">Amber</td><td>#f59e0b</td></tr>
+                <tr><td>CA Score (25-30)</td><td style="color:#10b981; font-weight:700;">Green</td><td>#10b981</td></tr>
+                <tr><td>GPA / Average</td><td style="color:#f59e0b; font-weight:700;">Gold</td><td>#f59e0b</td></tr>
+            </tbody>
+        </table>
+
+        <!-- ==================== SECTION 6: TECHNOLOGY STACK ==================== -->
+        <h2>6. Technology Stack</h2>
+
+        <table>
+            <thead>
+                <tr><th>Technology</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>PHP</strong></td><td>Backend server-side scripting</td></tr>
+                <tr><td><strong>MySQL</strong></td><td>Database management</td></tr>
+                <tr><td><strong>HTML5</strong></td><td>Structuring web pages</td></tr>
+                <tr><td><strong>CSS3</strong></td><td>Styling and responsive design</td></tr>
+                <tr><td><strong>JavaScript</strong></td><td>Interactivity and real-time features</td></tr>
+                <tr><td><strong>XAMPP</strong></td><td>Local development server (Apache, MySQL, PHP)</td></tr>
+                <tr><td><strong>phpMyAdmin</strong></td><td>Database management interface</td></tr>
+                <tr><td><strong>Git</strong></td><td>Version control</td></tr>
+                <tr><td><strong>Font Awesome</strong></td><td>Icons</td></tr>
+                <tr><td><strong>Google Fonts (Inter)</strong></td><td>Typography</td></tr>
+            </tbody>
+        </table>
+
+        <!-- ==================== SECTION 7: FOLDER STRUCTURE ==================== -->
+        <h2>7. File/Folder Structure</h2>
+
+        <div class="folder-tree">
+            <span class="folder">📁 QUESTA_FINAL/</span><br>
+            │<br>
+            ├── <span class="folder">📁 admin/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Admin Panel)</span><br>
+            │&nbsp;&nbsp;&nbsp;├── dashboard.php, manage-students.php, manage-lecturers.php<br>
+            │&nbsp;&nbsp;&nbsp;├── manage-users.php, manage-courses.php, manage-papers.php<br>
+            │&nbsp;&nbsp;&nbsp;├── manage-results.php, manage-timetable.php, manage-exams.php<br>
+            │&nbsp;&nbsp;&nbsp;├── manage-calendar.php, manage-news.php, manage-library.php<br>
+            │&nbsp;&nbsp;&nbsp;├── financial-status.php, send-notifications.php, register-student.php<br>
+            │&nbsp;&nbsp;&nbsp;└── header.php, sidebar.php, footer.php<br>
+            │<br>
+            ├── <span class="folder">📁 lecturer/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Lecturer Panel)</span><br>
+            │&nbsp;&nbsp;&nbsp;├── dashboard.php<br>
+            │&nbsp;&nbsp;&nbsp;└── upload-papers.php<br>
+            │<br>
+            ├── <span class="folder">📁 includes/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Shared Components)</span><br>
+            │&nbsp;&nbsp;&nbsp;├── config.php, header.php, sidebar.php, footer.php<br>
+            │&nbsp;&nbsp;&nbsp;└── check-notifications.php<br>
+            │<br>
+            ├── <span class="folder">📁 assets/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Static Assets)</span><br>
+            │&nbsp;&nbsp;&nbsp;├── <span class="folder">css/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Stylesheets)</span><br>
+            │&nbsp;&nbsp;&nbsp;├── <span class="folder">js/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(JavaScript files)</span><br>
+            │&nbsp;&nbsp;&nbsp;└── <span class="folder">images/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Logos and images)</span><br>
+            │<br>
+            ├── <span class="folder">📁 uploads/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(User Uploads)</span><br>
+            │&nbsp;&nbsp;&nbsp;├── <span class="folder">avatars/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Profile pictures)</span><br>
+            │&nbsp;&nbsp;&nbsp;└── <span class="folder">papers/</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Question paper PDFs)</span><br>
+            │<br>
+            ├── <span class="file">📄 index.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Landing Page)</span><br>
+            ├── <span class="file">📄 login.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Login Page)</span><br>
+            ├── <span class="file">📄 dashboard.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Student Dashboard)</span><br>
+            ├── <span class="file">📄 question-bank.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Question Bank)</span><br>
+            ├── <span class="file">📄 exam-results.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Exam Results)</span><br>
+            ├── <span class="file">📄 timetable.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Timetable)</span><br>
+            ├── <span class="file">📄 exam-dates.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Exam Dates)</span><br>
+            ├── <span class="file">📄 calendar.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Academic Calendar)</span><br>
+            ├── <span class="file">📄 news.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(News &amp; Updates)</span><br>
+            ├── <span class="file">📄 library.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Library &amp; Resources)</span><br>
+            ├── <span class="file">📄 profile.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Profile Management)</span><br>
+            ├── <span class="file">📄 financial-status.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Financial Status)</span><br>
+            ├── <span class="file">📄 chatbot.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(AI Chatbot)</span><br>
+            ├── <span class="file">📄 change-password.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Change Password)</span><br>
+            ├── <span class="file">📄 forgot-password.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Forgot Password)</span><br>
+            ├── <span class="file">📄 logout.php</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Logout)</span><br>
+            ├── <span class="file">📄 README.md</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Documentation)</span><br>
+            └── <span class="file">📄 .gitignore</span> &nbsp; <span style="color:#64748b; font-size:12px;">(Git ignore file)</span>
+        </div>
+
+        <!-- ==================== SECTION 8: RUN LOCALLY ==================== -->
+        <h2>8. How to Run This Project Locally on PC</h2>
+
+        <h3>Prerequisites</h3>
+        <ul style="margin-left: 20px; margin-bottom: 16px; color: #334155; line-height: 1.8;">
+            <li><strong>XAMPP</strong> (Apache, MySQL, PHP) - Download from <a href="https://www.apachefriends.org" target="_blank">https://www.apachefriends.org</a></li>
+            <li><strong>Git</strong> (optional) - Download from <a href="https://git-scm.com" target="_blank">https://git-scm.com</a></li>
+            <li><strong>VS Code</strong> (recommended) - Download from <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a></li>
+            <li><strong>Web Browser</strong> (Chrome, Firefox, or Edge)</li>
+        </ul>
+
+        <h3>Step 1: Install XAMPP</h3>
+        <div class="code-block">
+1. Download XAMPP from https://www.apachefriends.org
+2. Run the installer (accept all default settings)
+3. Open XAMPP Control Panel
+4. Click "Start" for Apache
+5. Click "Start" for MySQL
+6. Verify both are running (green highlights)
+        </div>
+
+        <h3>Step 2: Download the Project</h3>
+        <div class="code-block">
+# Option A: Clone with Git
+cd C:\xampp\htdocs
+git clone https://github.com/ndisilas/questa-hnd-question-bank.git questa_final
+
+# Option B: Download ZIP from GitHub
+# 1. Go to https://github.com/ndisilas/questa-hnd-question-bank
+# 2. Click Code → Download ZIP
+# 3. Extract to C:\xampp\htdocs\QUESTA_FINAL
+        </div>
+
+        <h3>Step 3: Create Database</h3>
+        <div class="code-block">
+1. Open your browser and go to: http://localhost/phpmyadmin
+2. Click "New" on the left sidebar
+3. Enter database name: questa_db
+4. Click "Create"
+        </div>
+
+        <h3>Step 4: Import Database</h3>
+        <div class="code-block">
+1. Click on "questa_db" on the left sidebar
+2. Click "Import" tab
+3. Click "Choose File"
+4. Select the SQL file from QUESTA_FINAL/questa_db.sql
+5. Click "Go"
+        </div>
+
+        <h3>Step 5: Configure Database Connection</h3>
+        <div class="code-block">
+Open includes/config.php and verify these settings:
+$host = 'localhost';
+$dbname = 'questa_db';
+$username = 'root';
+$password = '';
+        </div>
+
+        <h3>Step 6: Create Upload Directories</h3>
+        <div class="code-block">
+Make sure these folders exist and are writable:
+uploads/
+uploads/avatars/
+uploads/papers/
+        </div>
+
+        <h3>Step 7: Access the System</h3>
+        <div class="code-block">
+Open your browser and go to:
+http://localhost/questa_final/login.php
+
+Use the login credentials from Section 4 above.
+        </div>
+
+        <!-- ==================== SECTION 9: AUTHOR ==================== -->
+        <h2>9. Author Information</h2>
+
+        <table>
+            <thead>
+                <tr><th>Item</th><th>Details</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Full Name</strong></td><td>ANYA JOSEPHAT ETTA</td></tr>
+                <tr><td><strong>Institution</strong></td><td>CITEC-HITM</td></tr>
+                <tr><td><strong>Project</strong></td><td>Questa - HND Online Question Bank System</td></tr>
+                <tr><td><strong>Year</strong></td><td>2026</td></tr>
+                <tr><td><strong>Email</strong></td><td>josephatetta30@mail.com</td></tr>
+                <tr><td><strong>GitHub</strong></td><td>https://github.com/etta001</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Footer -->
+        <div style="margin-top: 48px; padding-top: 24px; border-top: 2px solid #e2e8f0; text-align: center; color: #94a3b8; font-size: 14px;">
+            <p>📘 Questa - HND Online Question Bank System &nbsp;|&nbsp; © 2026 ANYA JOSEPHAT ETTA &nbsp;|&nbsp; CITEC-HITM</p>
+            <p style="margin-top: 4px;">All rights reserved. For educational purposes only.</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Print functionality
+        document.querySelector('.print-btn').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+
+</body>
+</html>
